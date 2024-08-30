@@ -1,55 +1,112 @@
-<nav class="bg-gray-800">
-  <div class="mx-auto max-w-7xl px-2 sm:px-2 lg:px-2">
-    <div class="relative flex h-16 items-center justify-between">
-      <div class="absolute inset-y-0 left-0 flex items-center sm:hidden">
-        <!-- Mobile menu button-->
-        <button type="button" class="relative inline-flex items-center justify-center rounded-md p-2 text-gray-400 hover:bg-gray-700 hover:text-white focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white" aria-controls="mobile-menu" aria-expanded="false">
-          <span class="absolute -inset-0.5"></span>
-          <span class="sr-only">Open main menu</span>
-          <!--
-            Icon when menu is closed.
-
-            Menu open: "hidden", Menu closed: "block"
-          -->
-          <svg class="block h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
-            <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
-          </svg>
-          <!--
-            Icon when menu is open.
-
-            Menu open: "block", Menu closed: "hidden"
-          -->
-          <svg class="hidden h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
-            <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
-          </svg>
-        </button>
-      </div>
-      <div class="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start">
-        <div class="flex flex-shrink-0 items-center">
-          <a href="#" class="logo rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-gray-700 hover:text-white" aria-current="page">Portfolio</a>
-        </div>
-      </div>
-      <div class="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
-        <div class="relative ml-3">
-          <div>
-            <a href="#" class="rounded-md bg-gray-900 px-3 py-2 text-sm font-medium text-white" aria-current="page">Home</a>
-            <a href="#" class="rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-gray-700 hover:text-white">About</a>
-            <a href="#" class="rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-gray-700 hover:text-white">Skills</a>
-            <a href="#" class="rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-gray-700 hover:text-white">Experience</a>
+<div class="h-screen relative bg-gradient-to-t from-indigo-200">
+  <nav class="bg-gray-800 w-full fixed top-0 z-20">
+    <div class="mx-auto max-w-7xl px-2 sm:px-2 lg:px-2">
+      <div class="relative flex h-16 items-center justify-between">
+        <div class="flex flex-1 items-center justify-start sm:items-stretch sm:justify-start">
+          <div class="flex flex-shrink-0 items-center">
+            <a href="#" class="logo rounded-md px-3 py-2 text-2xl font-medium text-gray-300 hover:bg-gray-700 hover:text-white" aria-current="page">Portfolio</a>
           </div>
         </div>
+        <div class="absolute inset-y-0 right-0 md:flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0 hidden">
+          <div class="relative ml-3">
+            <div>
+              <a href="#" class="rounded-md px-3 py-2 text-lg font-medium text-white" aria-current="page">Home</a>
+              <a href="#" class="rounded-md px-3 py-2 text-lg font-medium text-gray-300 hover:bg-gray-700 hover:text-white">About</a>
+              <a href="#" class="rounded-md px-3 py-2 text-lg font-medium text-gray-300 hover:bg-gray-700 hover:text-white">Skills</a>
+              <a href="#" class="rounded-md px-3 py-2 text-lg font-medium text-gray-300 hover:bg-gray-700 hover:text-white">Experience</a>
+            </div>
+          </div>
+        </div>
+        <div class="inset-y-0 flex items-center sm:hidden" id="hamburger">
+          <!-- Mobile menu button-->
+          <button type="button" class="relative inline-flex items-center justify-center rounded-md p-2 text-gray-400 hover:bg-gray-700 hover:text-white focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white" aria-controls="mobile-menu" aria-expanded="false">
+            <span class="absolute -inset-0.5"></span>
+            <!--
+              Icon when menu is closed.
+
+              Menu open: "hidden", Menu closed: "block"
+            -->
+            <svg class="block h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+            </svg>
+            <!--
+              Icon when menu is open.
+
+              Menu open: "block", Menu closed: "hidden"
+            -->
+            <svg class="hidden h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+            </svg>
+          </button>
+        </div>
+      </div>
+    </div>
+    <ul class="hidden bg-gray-800 relative left-0 top-0 w-full px-8 py-4 text-gray-300 sm:hidden"  id="menu">
+      <li>
+        <a href="#">Home</a>
+      </li>
+      <li>
+        <a href="#">About</a>
+      </li>
+      <li>
+        <a href="#">Skills</a>
+      </li>
+      <li>
+        <a href="#">Experience</a>
+      </li>
+    </ul>
+  </nav>
+  <div class="container z-10">
+    <img
+    class="absolute bottom-0 right-0 lg:left-0 mx-auto sm:h-4/6 h-3/6 object-cover "
+    src="../assets/imgs/profile_img.png"
+    alt=""/>
+    <div class="absolute top-1/3 left-6 text-xl sm:left-2 sm:text-3xl md:text-5xl lg:left-5 xl:left-64 font-bold">
+      <span class="text-gray-600">I'm Tle, a</span><br>
+      <span class="text-gray-600">Web Developer</span>
+      <p class="text-red-500">.NET & Angular</p>
+    </div>
+  </div>
+</div>
+<div id="about" class="px-10 dark:bg-slate-900">
+  <div
+    class="container mx-auto py-40 flex flex-col-reverse lg:flex-row items-center gap-20"
+  >
+    <!-- left -->
+    <div class="relative">
+      <img
+        class="h-1/4 absolute top-0 left-0 -z-10"
+        src="./img/dots.png"
+        alt=""
+      />
+      <div class="h-full rounded-full overflow-hidden">
+        <img src="./img/portrait.png" alt="" />
+      </div>
+    </div>
+    <!-- right -->
+    <div class="my-auto flex flex-col gap-3">
+      <h1 class="text-indigo-600 font-bold">ABOUT ME</h1>
+      <h1 class="text-3xl font-medium dark:text-white">Better Design</h1>
+      <h1 class="text-3xl font-medium dark:text-white">
+        Better Experience
+      </h1>
+      <p class="text-gray-400">
+        I design and build digital products. I'm also a multi-disciplinary
+        maker with over 10 years of experiences in wide range of design
+        disciplines.
+      </p>
+      <h2 class="text-gray-400 font-medium">HTML</h2>
+      <div class="w-full bg-gray-200 h-1.5 rounded-md">
+        <div class="w-full bg-indigo-600 h-1.5 rounded-md"></div>
+      </div>
+      <h2 class="text-gray-400 font-medium">Javascript</h2>
+      <div class="w-full bg-gray-200 h-1.5 rounded-md">
+        <div class="w-4/6 bg-indigo-600 h-1.5 rounded-md"></div>
+      </div>
+      <h2 class="text-gray-400 font-medium">React</h2>
+      <div class="w-full bg-gray-200 h-1.5 rounded-md">
+        <div class="w-5/6 bg-indigo-600 h-1.5 rounded-md"></div>
       </div>
     </div>
   </div>
-
-  <!-- Mobile menu, show/hide based on menu state. -->
-  <div class="sm:hidden" id="mobile-menu">
-    <div class="space-y-1 px-2 pb-3 pt-2">
-      <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
-      <a href="#" class="block rounded-md bg-gray-900 px-3 py-2 text-base font-medium text-white" aria-current="page">Dashboard</a>
-      <a href="#" class="block rounded-md px-3 py-2 text-base font-medium text-gray-300 hover:bg-gray-700 hover:text-white">Team</a>
-      <a href="#" class="block rounded-md px-3 py-2 text-base font-medium text-gray-300 hover:bg-gray-700 hover:text-white">Projects</a>
-      <a href="#" class="block rounded-md px-3 py-2 text-base font-medium text-gray-300 hover:bg-gray-700 hover:text-white">Calendar</a>
-    </div>
-  </div>
-</nav>
+</div>
